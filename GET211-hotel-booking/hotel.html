@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Crest Hotel Booking App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <div class="slides">
+            <div class="slide" style="background-image: url('images/hotel-1.jpg');">
+            </div>
+            <div class="slide" style="background-image: url('images/hotel-2.jpg');">
+            </div>
+            <div class="slide" style="background-image: url('images/hotel-3.jpg');">
+            </div>
+        </div>
+        <h1>Azure Crest Seaside Hotel and Suites — Booking and Reservations</h1>
+        <p>Choose a room & make a booking at our prestigious seaside getaway<!--(client-side only)-->.</p>
+    </header>
+    <main class="container">
+        <section id="roomsList" class="rooms-grid"></section>
+    </main>
+
+    <!-- Booking Modal (made visible for debugging/dev) -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button id="closeModal" class="close">×</button>
+            <h2 id="modalTitle">Book room</h2>
+            <form id="bookingForm">
+                <input type="hidden" id="roomId" />
+                <label>
+                    Your name
+                    <input type="text" id="guestName" required />
+                </label>
+                <label>
+                    Email
+                    <input type="email" id="guestEmail" required />
+                </label>
+                <label>
+                    Check-in
+                    <input type="date" id="checkIn" required />
+                </label>
+                <label>
+                    Check-out
+                    <input type="date" id="checkOut" required />
+                </label>
+                <div class="form-actions">
+                    <button type="submit">Confirm Booking</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #062b1e 0%, #0b3b28 100%);
+    /* dark green hue */
+    color: #e6f2e6;
+    /* light text */
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    /* blend with page background */
+    padding: 12px 0;
+    box-shadow: none;
+    border-bottom: none;
+}
+
+.navbar a {
+    color: #e6f2e6;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.25s, border-bottom-color 0.2s;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    border-bottom-color: #9fe8b7;
+}
+
+/* Center content */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Button styling */
+.btn {
+    background-color: #556b2f;
+    /* olive green */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 22px;
+    font-family: 'Lora', cursive;
+    /* pretty font */
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #6b8e23;
+    /* lighter olive */
+    transform: scale(1.05);
+}
+
+/* Tooltip styling */
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 260px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    top: 110%;
+    /* below the button */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* responsive tweaks */
+@media (max-width: 600px) {
+    .navbar a {
+        margin: 8px 12px;
+        font-size: 14px;
+        padding-bottom: 4px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    .center {
+        height: 60vh;
+    }
+
+    .tooltip {
+        width: 200px;
+        font-size: 12px;
+    }
+}

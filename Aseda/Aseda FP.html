@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="theme.css" />
+    <title>Aseda FP</title>
+</head>
+
+<body>
+    <main class="container page-center" id="intro">
+        <img src="images/IMG-20250507-WA0125.jpg" alt="Intro image" style="max-width:100%;height:auto;display:block;" />
+        <h2 id="welcomeHeading">Welcome to Aséda Couture</h2>
+        <h4 style="margin-top:0;">Your one-stop shop for custom-made and readymade clothing</h4>
+        <button id="logoutBtn" targ
+            style="margin-top:12px;background:#7aa97a;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;color:#07210f">Log
+            out</button>
+    </main>
+    <script>
+        // Display current user and target the button to different pages
+        (function () {
+            const current = JSON.parse(localStorage.getItem('aseda_current_user') || 'null');
+            const heading = document.getElementById('welcomeHeading');
+            const btn = document.getElementById('logoutBtn');
+            if (current && current.username) {
+                heading.textContent = `Welcome, ${current.username}`;
+                btn.textContent = 'Continue';
+                btn.onclick = () => { window.location.href = '1st_infopg.html'; };
+            } else {
+                btn.textContent = 'Sign in/up';
+                btn.onclick = () => { window.location.href = 'login.html'; };
+            }
+        })();
+    </script>
+</body>
+
+</html>
