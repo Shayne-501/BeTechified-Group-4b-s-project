@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-// Function to output "hELLO WORLD!"
+// A function to output "HELLO WORLD!"
 void printHelloWorld()
 {
-    printf("hELLO WORLD!\n");
+    printf("HELLO WORLD!\n");
 }
 
-// Function to sum two even numbers
+// A function to sum two even numbers
 int sumEvenNumbers(int a, int b)
 {
     if (a % 2 == 0 && b % 2 == 0)
@@ -20,7 +20,7 @@ int sumEvenNumbers(int a, int b)
     }
 }
 
-// Function to determine the largest of three numbers
+// A function to determine the largest of three numbers
 int largestOfThree(int x, int y, int z)
 {
     int largest = x;
@@ -35,10 +35,16 @@ int main()
 {
     printHelloWorld();
 
-    int evenSum = sumEvenNumbers(4, 8);
+    int a, b;
+    printf("Enter two even numbers: ");
+    scanf("%d %d", &a, &b);
+    int evenSum = sumEvenNumbers(a, b);
     printf("Sum of even numbers: %d\n", evenSum);
 
-    int largest = largestOfThree(10, 25, 7);
+    int x, y, z;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &x, &y, &z);
+    int largest = largestOfThree(x, y, z);
     printf("Largest number: %d\n", largest);
 
     return 0;
