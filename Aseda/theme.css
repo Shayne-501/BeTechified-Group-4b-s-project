@@ -13,8 +13,24 @@ body {
     padding-top: 20px;
 }
 
-input {
-    color: #0b1220;
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container h4 {
+    margin-top: 0;
+}
+
+#logoutBtn {
+    margin-top: 12px;
+    background: #7aa97a;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #07210f;
 }
 
 /* Use Pacifico for the main heading and buttons */
