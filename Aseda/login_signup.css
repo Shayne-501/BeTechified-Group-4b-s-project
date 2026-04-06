@@ -6,6 +6,10 @@
     box-shadow: 0 0 10px rgba(2, 35, 2, 0.103);
 }
 
+textarea :placeholder-shown {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 form {
     display: flex;
     flex-direction: column;

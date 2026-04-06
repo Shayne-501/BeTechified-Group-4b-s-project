@@ -13,35 +13,39 @@
         <h1>Hi — let’s get to know you</h1>
         <form id="infoForm">
             <div>
-                <label><strong>What can we call you, for short?</strong></label>
+                <label><strong>Your full name</strong></label>
                 <br>
-                <input type="radio" name="title" value="Miss"> Miss
-                <input type="radio" name="title" value="Mrs"> Mrs
-                <input type="radio" name="title" value="Mr"> Mr
-                <br>
-                <input type="text" name="shortName" placeholder="e.g. Anna" required />
+                <input type="text" name="fullName" placeholder="Full name" required />
             </div>
 
             <br>
+
             <div>
-                <label><strong>Your full name</strong></label>
+                <label><strong>What can we call you, for short?</strong></label>
                 <br>
-                <input type="text" name="fullName" placeholder="Full name" />
+                <label><input type="radio" name="title" value="Miss"> Miss</label>
+                <label><input type="radio" name="title" value="Mrs"> Mrs</label>
+                <label><input type="radio" name="title" value="Mr"> Mr</label>
+                <br>
+                <input type="text" name="shortName" placeholder="e.g. Princess" required />
             </div>
+
+            <br>
 
             <div>
                 <label><strong>Your Gender</strong></label>
                 <br>
-                <input type="radio" name="gender" value="Male"> Male
-                <input type="radio" name="gender" value="Female"> Female
-                <input type="radio" name="gender" value="Non-binary"> Non-binary
-                <input type="radio" name="gender" value="Prefer not to tell"> Prefer not to tell
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="Non-binary" required> Non-binary</label>
+                <label><input type="radio" name="gender" value="Prefer not to tell" required> Prefer not to tell</label>
             </div>
 
             <br>
             <div>
-                <label><strong>Choose a label size</strong></label>
-                <select name="size">
+                <label for="size"><strong>Choose a label size</strong></label>
+                <br>
+                <select name="size" id="size" required>
                     <option value="">Please choose</option>
                     <option value="small">Small (S)</option>
                     <option value="medium">Medium (M)</option>
@@ -50,7 +54,9 @@
                 </select>
             </div>
 
-            <textarea name="notes" rows="5" cols="50" placeholder="Anything else you'd like to let us know?"></textarea>
+            <label for="notes"><strong>Anything else you'd like to let us know?</strong></label>
+            <textarea id="notes" name="notes" rows="5" cols="50"
+                placeholder="Anything else you'd like to let us know?"></textarea>
             <button type="submit">All done!</button>
         </form>
     </main>
